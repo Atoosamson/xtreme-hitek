@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Services | Xtreme Hitek - Premium Tech Solutions</title>
+
+<meta name="description" content="Explore Xtreme Hitek services: web development, mobile apps, UI/UX design, game development, digital marketing, IT support, and tech training.">
+<meta name="keywords" content="Web Development, App Development, UI UX, Game Development, Digital Marketing, IT Support, Tech Training">
+<meta name="author" content="Xtreme Hitek">
+
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* HERO */
+.services-hero {
+    height: 320px;
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.6)),
+                url('images/slide3.jpg') center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* SERVICE GRID */
+.service-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.service-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+.service-card i {
+    font-size: 40px;
+    color: gold;
+    margin-bottom: 10px;
+}
+
+/* PROCESS */
+.process {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.step {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+}
+
+/* CTA */
+.cta {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+/* REVEAL ANIMATION */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #111;
+    color: #fff;
+    padding: 50px 20px 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.footer-box {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-box h3, .footer-box h2 {
+    margin-bottom: 15px;
+}
+
+.footer-box a {
+    color: #ccc;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 8px;
+    transition: 0.3s;
+}
+
+.footer-box a:hover {
+    color: gold;
+}
+
+.footer-box i {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    font-size: 14px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo-box">
+        <img src="images/logo.png" alt="Logo">
+        <h2>Xtreme Hitek</h2>
+    </div>
+
+    <div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="services-hero reveal">
+    <h1>Our Services</h1>
+</div>
+
+<!-- SERVICES -->
+<section class="reveal">
+<h2 style="text-align:center;">What We Offer</h2>
+
+<div class="service-box">
+
+<div class="service-card">
+<i class="fas fa-code"></i>
+<h3>Web Development</h3>
+<p>Modern, fast, and conversion-focused websites designed to grow your business.</p>
+<p><b>Includes:</b> Business sites, dashboards, web apps.</p>
+</div>
+
+<div class="service-card">
+<i class="fas fa-mobile-alt"></i>
+<h3>Mobile App Development</h3>
+<p>High-performance Android & iOS applications built for scalability.</p>
+<p><b>Includes:</b> UI/UX design, backend integration.</p>
+</div>
+
+<div class="service-card">
+<i class="fas fa-paint-brush"></i>
+<h3>Graphics & UI/UX Design</h3>
+<p>Clean, modern designs that improve user experience and brand identity.</p>
+<p><b>Includes:</b> App UI, website design, branding.</p>
+</div>
+
+<div class="service-card">
+<i class="fas fa-gamepad"></i>
+<h3>Game Development</h3>
+<p>Interactive and engaging games built for mobile and web platforms.</p>
+<p><b>Includes:</b> 2D/3D games, gameplay systems.</p>
+</div>
+
+<div class="service-card">
+<i class="fas fa-chart-line"></i>
+<h3>Digital Marketing</h3>
+<p>Grow your business online with targeted marketing strategies.</p>
+<p><b>Includes:</b> SEO, ads, social media growth.</p>
+</div>
+
+<div class="service-card">
+<i class="fas fa-laptop-code"></i>
+<h3>Tech Training</h3>
+<p>Learn high-income digital skills with practical real-world projects.</p>
+<p><b>Includes:</b> Programming, web dev, mentorship.</p>
+</div>
+
+<div class="service-card">
+<i class="fas fa-headset"></i>
+<h3>IT Support</h3>
+<p>Reliable technical support to keep your business running smoothly.</p>
+<p><b>Includes:</b> Maintenance, troubleshooting.</p>
+</div>
+
+</div>
+</section>
+
+<!-- PROCESS -->
+<section style="background:#f1f3f6;" class="reveal">
+<h2 style="text-align:center;">How We Work</h2>
+
+<div class="process">
+
+<div class="step">
+<h3>1. Consultation</h3>
+<p>We understand your goals and business needs.</p>
+</div>
+
+<div class="step">
+<h3>2. Planning</h3>
+<p>We design the best strategy for your project.</p>
+</div>
+
+<div class="step">
+<h3>3. Development</h3>
+<p>We build high-quality and scalable solutions.</p>
+</div>
+
+<div class="step">
+<h3>4. Delivery</h3>
+<p>We launch and support your project.</p>
+</div>
+
+</div>
+</section>
+
+<!-- CTA -->
+<div class="cta reveal">
+<h2>Ready to Start Your Project?</h2>
+<p>Let’s build something amazing together.</p>
+<button onclick="location.href='contact.html'">Get Started</button>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-box">
+<h2>Xtreme Hitek</h2>
+<p>We build high-performance digital solutions for businesses worldwide.</p>
+</div>
+
+<div class="footer-box">
+<h3>Quick Links</h3>
+<a href="index.html">Home</a><br>
+<a href="about.html">About</a><br>
+<a href="services.html">Services</a><br>
+<a href="portfolio.html">Portfolio</a><br>
+<a href="contact.html">Contact</a>
+</div>
+
+<!-- Contact Info -->
+<div class="footer-box">
+<h3>Contact</h3>
+<p>111, Festac Town, Lagos, Nigeria</p>
+<p>info.xtremehitek@gmail.com</p>
+<p>+234 9134758608</p>
+</div>
+
+<div class="footer-box">
+<h3>Follow Us</h3>
+<a href="https://www.facebook.com/share/18Xf7keSer/"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="https://www.linkedin.com/in/sam-atoo-94812a1a6?utm_source=share_via&utm_content=profile&utm_medium=member_android"><i class="fab fa-linkedin"></i></a>
+<a href="https://wa.me/2349134758608"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+<p>© 2026 Xtreme Hitek. All rights reserved. | <a href="privacy.html" style="color:gold;">Privacy Policy</a></p>
+
+</div>
+
+</footer>
+
+<!-- SCROLL FIX SCRIPT -->
+<script>
+function revealOnScroll(){
+    const reveals = document.querySelectorAll(".reveal");
+
+    reveals.forEach(el => {
+        let windowHeight = window.innerHeight;
+        let elementTop = el.getBoundingClientRect().top;
+
+        if(elementTop < windowHeight - 100){
+            el.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+</script>
+
+</body>
+</html>

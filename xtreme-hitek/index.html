@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Xtreme Hitek | Premium Tech Solutions</title>
+<meta name="description" content="Xtreme Hitek provides premium tech solutions: web & mobile development, software, UI/UX design, game development, digital marketing, and professional tech training.">
+<meta name="keywords" content="Tech Solutions, Web Development, App Development, Software, UI/UX Design, Game Development, Digital Marketing, Tech Training, Nigeria, Lagos">
+<meta name="author" content="Xtreme Hitek">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="icon" type="image/png" href="images/logo.png">
+<style>
+
+/* ===== PRELOADER ===== */
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #333;
+    border-top: 5px solid gold;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ===== NAVBAR ===== */
+nav { display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; background:#111; color:#fff; position: sticky; top:0; z-index:100; }
+nav h2 { color:#fbbf24; }
+nav div a { color:#fff; text-decoration:none; margin-left:1.5rem; transition:0.3s; }
+nav div a:hover { color:#fbbf24; }
+
+/* ===== CAROUSEL ===== */
+.carousel { position: relative; height: 550px; overflow: hidden; }
+.slide { position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 1s ease-in-out; background-size: cover; background-position: center; display:flex; justify-content:center; align-items:center; }
+.slide.active { opacity: 1; z-index: 2; }
+
+.overlay { width:100%; height:100%; display:flex; justify-content:center; align-items:center; text-align:center; color: #111; transition:0.5s; padding:0 1rem; background: rgba(212,175,55,0.6); }
+.overlay.dark { background: rgba(0,0,0,0.5); color:white; }
+.overlay h1 { font-size:48px; margin-bottom:10px; }
+.overlay p { font-size:18px; }
+.overlay button { margin-top:15px; padding:12px 25px; border:none; background:#111; color:gold; cursor:pointer; border-radius:5px; transition:0.3s; }
+.overlay button:hover { background:#222; }
+
+/* DOTS */
+.dots { position: absolute; bottom:20px; width:100%; text-align:center; z-index:10; }
+.dot { height:12px; width:12px; margin:5px; background:#fff; display:inline-block; border-radius:50%; cursor:pointer; transition:0.3s; }
+.dot.active { background:gold; }
+
+
+/* ===== SLIDING TESTIMONIAL ===== */
+.carousel-testimonial {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 600px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.6);
+    border-radius: 12px;
+    padding: 20px;
+    backdrop-filter: blur(6px);
+}
+
+.testimonial-track {
+    display: flex;
+    transition: transform 1.5s ease-in-out; /* SLOW + SMOOTH */
+}
+
+.testimonial-item {
+    min-width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.testimonial-item p {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.testimonial-item span {
+    font-size: 14px;
+    color: gold;
+}
+
+
+
+/* ===== SERVICES ===== */
+.section-title { font-size:30px; margin-bottom:20px; text-align:center; color:#111; margin-top:2rem; }
+.services { display:flex; justify-content:center; flex-wrap:wrap; gap:2rem; max-width:1200px; margin:0 auto; }
+.services .card { background:#fff; padding:2rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); flex:1; min-width:250px; text-align:center; transition:0.3s; }
+.services .card:hover { transform: translateY(-5px); }
+.services .card i { font-size:2rem; color:#fbbf24; margin-bottom:10px; }
+
+/* ===== TRUST & PARTNERS ===== */
+.trust-section { padding:3rem 1rem; text-align:center; background:#f7f7f7; }
+.trust-section h2 { margin-bottom:2rem; font-size:32px; }
+.client-logos { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); justify-items:center; gap:2rem; align-items:center; margin-top:2rem; }
+.client-logos img { height:80px; width:auto; object-fit:contain; border:2px solid #ddd; border-radius:12px; padding:10px; background:#fff; transition:0.3s; }
+.client-logos img:hover { transform:scale(1.05); border-color:gold; }
+
+/* ===== TESTIMONIALS ===== */
+.testimonials { padding:3rem 1rem; text-align:center; background:#fefefe; }
+.testimonials h2 { margin-bottom:2rem; font-size:32px; }
+.testimonial-card { display:inline-block; background:#fff; padding:1.5rem; margin:1rem; border-radius:12px; max-width:300px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
+
+/* ===== CTA ===== */
+.cta { background:#111; color:white; text-align:center; padding:3rem 1rem; }
+.cta button { padding:12px 25px; border:none; border-radius:5px; background:gold; color:#111; cursor:pointer; transition:0.3s; }
+.cta button:hover { background:#e0a800; }
+
+/* ===== FOOTER ===== */
+footer { background:#111; color:#fff; text-align:center; padding:2rem 1rem; }
+footer p { margin:0; }
+footer .social a { margin:0 10px; color:#fff; font-size:1.2rem; transition:0.3s; }
+footer .social a:hover { color:gold; }
+
+/* ===== WHATSAPP BUTTON ===== */
+.whatsapp-btn { position:fixed; bottom:20px; right:20px; background:#25D366; color:#fff; padding:1rem 1.2rem; border-radius:50px; font-size:1.5rem; display:flex; align-items:center; box-shadow:0 4px 12px rgba(0,0,0,0.2); text-decoration:none; z-index:1000; transition:0.3s; }
+.whatsapp-btn:hover { background:#1ebe57; }
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){ .services{ flex-direction:column; align-items:center; } .overlay h1{ font-size:32px; } .overlay p{ font-size:16px; } .client-logos img{ height:60px; } }
+
+
+/* ===== STATS SECTION ===== */
+.stats-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 3rem 1rem;
+    background: #111;
+    color: #fff;
+    text-align: center;
+}
+
+.stat h2 {
+    font-size: 40px;
+    color: gold;
+}
+
+.stat p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* ===== SCROLL ANIMATION ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* ===== STICKY CTA ===== */
+.sticky-cta {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    background: gold;
+    color: #111;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #111;
+    color: #fff;
+    padding: 50px 20px 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.footer-box {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-box h3, .footer-box h2 {
+    margin-bottom: 15px;
+}
+
+.footer-box a {
+    color: #ccc;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 8px;
+    transition: 0.3s;
+}
+
+.footer-box a:hover {
+    color: gold;
+}
+
+.footer-box i {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    font-size: 14px;
+}
+
+</style>
+</head>
+
+<body>
+
+
+    <div id="preloader">
+    <div class="loader"></div>
+</div>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo-box">
+        <img src="images/logo.png" alt="Xtreme Hitek Logo" style="height:50px;">
+        <h2>Xtreme Hitek</h2>
+    </div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+
+<!-- CAROUSEL -->
+<div class="carousel">
+    <div class="slide active" style="background-image:url('images/slide1.png')" loading="lazy">
+        <div class="overlay">
+            <div>
+                <h1>Xtreme Hitek</h1>
+                <p>Premium Tech Solutions Company</p>
+                <button onclick="location.href='contact.html'">Get Started</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide" style="background-image:url('images/slide2.jpg')" loading="lazy">
+        <div class="overlay dark">
+            <div>
+                <h1>We Build Powerful Software</h1>
+                <p>Web & Mobile Development</p>
+                <button onclick="location.href='services.html'">Our Services</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide" style="background-image:url('images/slide3.png')" loading="lazy">
+        <div class="overlay">
+            <div>
+                <h1>Learn High Income Skills</h1>
+                <p>Professional Tech Training</p>
+                <button onclick="location.href='contact.html'">Start Learning</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="dots">
+        <span class="dot active" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+
+<div class="carousel-testimonial">
+    <div class="testimonial-track" id="testimonial-track">
+        <div class="testimonial-item">
+            <p>"Xtreme Hitek built our website and our sales increased massively!"</p>
+            <span>- Jane Doe, CEO</span>
+        </div>
+
+        <div class="testimonial-item">
+            <p>"Highly professional team. Delivered beyond expectations."</p>
+            <span>- John Smith, Founder</span>
+        </div>
+
+        <div class="testimonial-item">
+            <p>"Their digital marketing brought us thousands of new customers!"</p>
+            <span>- Mary Johnson</span>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+<!-- SERVICES -->
+<section>
+    <h2 class="section-title">Our Services</h2>
+    <div class="services">
+        <div class="card">
+            <i class="fas fa-code"></i>
+            <h3>Web Development</h3>
+            <p>Modern websites and systems for businesses.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>App Development</h3>
+            <p>Android & iOS applications with sleek designs.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Tech Training</h3>
+            <p>Learn programming & digital skills for high-paying jobs.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-paint-brush"></i>
+            <h3>Graphics & UI/UX Design</h3>
+            <p>Professional designs for websites, apps, and branding.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-gamepad"></i>
+            <h3>Game Development</h3>
+            <p>Custom 2D/3D games for desktop and mobile platforms.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-bullhorn"></i>
+            <h3>Digital Marketing</h3>
+            <p>SEO, social media, and online campaigns to grow your business.</p>
+        </div>
+    </div>
+</section>
+
+
+<a href="contact.html" class="sticky-cta">Get Quote</a>
+
+
+
+<!-- HAPPY-CLIENT -->
+<section class="stats-section">
+    <div class="stat">
+        <h2 class="counter" data-target="150">0</h2>
+        <p>Projects Completed</p>
+    </div>
+
+    <div class="stat">
+        <h2 class="counter" data-target="100">0</h2>
+        <p>Happy Clients</p>
+    </div>
+
+    <div class="stat">
+        <h2 class="counter" data-target="6">0</h2>
+        <p>Years Experience</p>
+    </div>
+
+    <div class="stat">
+        <h2 class="counter" data-target="24">0</h2>
+        <p>Support Availability (Hours)</p>
+    </div>
+</section>
+
+
+
+<!-- TRUST & PARTNERS -->
+ <section class="trust-section reveal">
+<section class="trust-section">
+    <h2>Trusted By</h2>
+    <div class="client-logos">
+        <img src="images/client1.jpg" alt="Client 1" loading="lazy">
+        <img src="images/client2.jpg" alt="Client 2" loading="lazy">
+        <img src="images/client3.jpg" alt="Client 3" loading="lazy">
+        <img src="images/client4.jpg" alt="Client 4" loading="lazy">
+        <img src="images/client5.jpg" alt="Client 5" loading="lazy">
+        <img src="images/client6.jpg" alt="Client 6" loading="lazy">
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-card">
+        <p>"Xtreme Hitek built our e-commerce platform. Revenue doubled in 3 months!"</p>
+        <strong>- Jane Doe, CEO of ShopSmart</strong>
+    </div>
+    <div class="testimonial-card">
+        <p>"Professional, fast, and reliable. Highly recommend their services."</p>
+        <strong>- John Smith, Founder of TechWave</strong>
+    </div>
+    <div class="testimonial-card">
+        <p>"Their digital marketing team helped us reach thousands of new customers online!"</p>
+        <strong>- Mary Johnson, Marketing Lead at BrandBoost</strong>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <h2>Ready to Build Your Project?</h2>
+    <p>Let’s turn your idea into reality.</p>
+    <button onclick="location.href='contact.html'">Contact Us</button>
+</section>
+
+
+
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- BRAND -->
+        <div class="footer-box">
+            <h2>Xtreme Hitek</h2>
+            <p>We build high-performance websites, apps, and digital solutions for businesses worldwide.</p>
+        </div>
+
+        <!-- NAVIGATION -->
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a><br>
+            <a href="about.html">About</a><br>
+            <a href="services.html">Services</a><br>
+            <a href="portfolio.html">Portfolio</a><br>
+            <a href="contact.html">Contact</a>
+        </div>
+
+       <!-- Contact Info -->
+<div class="footer-box">
+<h3>Contact</h3>
+<p>111, Festac Town, Lagos, Nigeria</p>
+<p>info.xtremehitek@gmail.com</p>
+<p>+234 9134758608</p>
+</div>
+
+
+        <!-- SOCIAL -->
+        <div class="footer-box">
+            <h3>Follow Us</h3>
+
+            <a href="https://www.facebook.com/share/18Xf7keSer/"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/sam-atoo-94812a1a6?utm_source=share_via&utm_content=profile&utm_medium=member_android"><i class="fab fa-linkedin"></i></a>
+            <a href="https://wa.me/2349134758608"><i class="fab fa-whatsapp"></i></a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Xtreme Hitek. All rights reserved. | <a href="privacy.html" style="color:gold;">Privacy Policy</a></p>
+
+    </div>
+
+</footer>
+
+
+
+
+
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/2349134758608" class="whatsapp-btn" target="_blank">
+    <i class="fab fa-whatsapp"></i>&nbsp; Chat with Us
+</a>
+
+<script>
+// ===== CAROUSEL SCRIPT =====
+let slides = document.querySelectorAll(".slide");
+let dots = document.querySelectorAll(".dot");
+let index = 0;
+
+function showSlide(i){
+    slides.forEach(s => s.classList.remove("active"));
+    dots.forEach(d => d.classList.remove("active"));
+
+    slides[i].classList.add("active");
+    dots[i].classList.add("active");
+
+    // Auto-adjust text color depending on overlay
+    let overlay = slides[i].querySelector(".overlay");
+    let isDark = window.getComputedStyle(overlay).backgroundColor.includes("0, 0, 0");
+    overlay.style.color = isDark ? "#fff" : "#111";
+
+    index = i;
+}
+
+function currentSlide(i){ showSlide(i); }
+
+// SAME SPEED as testimonial (6 seconds)
+setInterval(() => {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+}, 6000);
+
+
+// ===== TESTIMONIAL SLIDER (SIDEWAYS + SLOW) =====
+const track = document.getElementById("testimonial-track");
+const totalSlides = document.querySelectorAll(".testimonial-item").length;
+
+let tIndex = 0;
+
+function slideTestimonials(){
+    tIndex = (tIndex + 1) % totalSlides;
+
+    track.style.transform = `translateX(-${tIndex * 100}%)`;
+}
+
+// VERY IMPORTANT: slower timing (8–10 seconds for readability)
+setInterval(slideTestimonials, 9000);
+
+
+
+// ===== SCROLL REVEAL =====
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll(){
+    let windowHeight = window.innerHeight;
+
+    reveals.forEach(el => {
+        let elementTop = el.getBoundingClientRect().top;
+
+        if(elementTop < windowHeight - 100){
+            el.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+
+// ===== COUNTER ANIMATION =====
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach(counter => {
+    counter.innerText = "0";
+
+    const updateCounter = () => {
+        const target = +counter.getAttribute("data-target");
+        const current = +counter.innerText;
+
+        const increment = target / 100;
+
+        if(current < target){
+            counter.innerText = Math.ceil(current + increment);
+            setTimeout(updateCounter, 30);
+        } else {
+            counter.innerText = target;
+        }
+    };
+
+    // Trigger when visible
+    window.addEventListener("scroll", () => {
+        let position = counter.getBoundingClientRect().top;
+        let screenHeight = window.innerHeight;
+
+        if(position < screenHeight){
+            updateCounter();
+        }
+    });
+});
+
+
+// PRELOADER
+window.addEventListener("load", () => {
+    document.getElementById("preloader").style.display = "none";
+});
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

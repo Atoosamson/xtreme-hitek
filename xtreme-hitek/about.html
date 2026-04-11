@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Us | Xtreme Hitek - Premium Tech Solutions</title>
+
+<meta name="description" content="Xtreme Hitek is a premium tech company specializing in web development, mobile apps, UI/UX design, game development, digital marketing, and tech training in Nigeria and globally.">
+<meta name="keywords" content="Xtreme Hitek, Web Development Nigeria, UI UX Design, Software Company Lagos, App Development, Digital Marketing, Tech Training">
+<meta name="author" content="Xtreme Hitek">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="icon" type="image/png" href="images/logo.png">
+
+<style>
+
+/* ===== HERO ===== */
+.about-hero {
+    height: 320px;
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.6)),
+                url('images/slide2.jpg') center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.about-hero h1 {
+    font-size: 42px;
+}
+
+/* ===== FLEX SECTION ===== */
+.flex-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+}
+
+.flex-box img {
+    width: 350px;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ===== INFO GRID ===== */
+.info-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.info-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card i {
+    font-size: 35px;
+    color: gold;
+    margin-bottom: 10px;
+}
+
+/* ===== CTA ===== */
+.cta-section {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.cta-section button {
+    margin-top: 15px;
+}
+
+/* ===== SCROLL ANIMATION ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== NAV IMPROVEMENT (light fix only) ===== */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+nav img {
+    height: 45px;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: gold;
+}
+
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #111;
+    color: #fff;
+    padding: 50px 20px 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.footer-box {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-box h3, .footer-box h2 {
+    margin-bottom: 15px;
+}
+
+.footer-box a {
+    color: #ccc;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 8px;
+    transition: 0.3s;
+}
+
+.footer-box a:hover {
+    color: gold;
+}
+
+.footer-box i {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    font-size: 14px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo-box">
+        <img src="images/logo.png" alt="Xtreme Hitek Logo">
+        <h2>Xtreme Hitek</h2>
+    </div>
+
+    <div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="about-hero reveal">
+    <h1>About Us</h1>
+</div>
+
+<!-- INTRO -->
+<section class="reveal">
+    <div class="flex-box">
+
+        <img src="images/about.png" alt="About Xtreme Hitek">
+
+        <div>
+            <h2>Who We Are</h2>
+            <p>
+                Xtreme Hitek is a forward-thinking technology company focused on building
+                modern digital solutions for businesses and individuals.
+            </p>
+
+            <p>
+                We specialize in web development, mobile apps, UI/UX design, game development,
+                digital marketing, and tech training, helping clients grow in the digital world.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- MISSION & VISION -->
+<section style="background:#f1f3f6;" class="reveal">
+    <div class="info-box">
+
+        <div class="info-card">
+            <i class="fas fa-bullseye"></i>
+            <h3>Our Mission</h3>
+            <p>To deliver high-quality tech solutions that solve real problems.</p>
+        </div>
+
+        <div class="info-card">
+            <i class="fas fa-eye"></i>
+            <h3>Our Vision</h3>
+            <p>To become a globally recognized tech innovation company.</p>
+        </div>
+
+        <div class="info-card">
+            <i class="fas fa-star"></i>
+            <h3>Our Values</h3>
+            <p>Innovation, excellence, integrity, and customer satisfaction.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="reveal">
+    <h2 style="text-align:center;">Why Choose Us</h2>
+
+    <div class="info-box">
+
+        <div class="info-card">
+            <i class="fas fa-check-circle"></i>
+            <h3>Professional Work</h3>
+            <p>We deliver clean, modern and scalable solutions.</p>
+        </div>
+
+        <div class="info-card">
+            <i class="fas fa-users"></i>
+            <h3>Client Focused</h3>
+            <p>Your success is our priority.</p>
+        </div>
+
+        <div class="info-card">
+            <i class="fas fa-clock"></i>
+            <h3>On-Time Delivery</h3>
+            <p>We respect deadlines and deliver efficiently.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section reveal">
+    <h2>Let’s Build Something Great Together</h2>
+    <p>We are ready to bring your ideas to life.</p>
+    <button onclick="location.href='contact.html'">Contact Us</button>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- BRAND -->
+        <div class="footer-box">
+            <h2>Xtreme Hitek</h2>
+            <p>We build high-performance websites, apps, and digital solutions for businesses worldwide.</p>
+        </div>
+
+        <!-- NAVIGATION -->
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a><br>
+            <a href="about.html">About</a><br>
+            <a href="services.html">Services</a><br>
+            <a href="portfolio.html">Portfolio</a><br>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-box">
+<h3>Contact</h3>
+<p>111, Festac Town, Lagos, Nigeria</p>
+<p>info.xtremehitek@gmail.com</p>
+<p>+234 9134758608</p>
+</div>
+
+        <!-- SOCIAL -->
+        <div class="footer-box">
+            <h3>Follow Us</h3>
+
+            <a href="https://www.facebook.com/share/18Xf7keSer/"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/sam-atoo-94812a1a6?utm_source=share_via&utm_content=profile&utm_medium=member_android"><i class="fab fa-linkedin"></i></a>
+            <a href="https://wa.me/2349134758608"><i class="fab fa-whatsapp"></i></a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Xtreme Hitek. All rights reserved. | <a href="privacy.html" style="color:gold;">Privacy Policy</a></p>
+
+    </div>
+
+</footer>
+
+
+<script>
+function revealOnScroll(){
+    const reveals = document.querySelectorAll(".reveal");
+
+    reveals.forEach(el => {
+        let windowHeight = window.innerHeight;
+        let elementTop = el.getBoundingClientRect().top;
+
+        if(elementTop < windowHeight - 100){
+            el.classList.add("active");
+        }
+    });
+}
+
+// RUN ON SCROLL
+window.addEventListener("scroll", revealOnScroll);
+
+// RUN IMMEDIATELY ON PAGE LOAD (FIXES BLANK PAGE)
+window.addEventListener("load", revealOnScroll);
+</script>
+
+</body>
+</html>
