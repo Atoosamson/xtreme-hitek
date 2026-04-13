@@ -174,51 +174,7 @@ nav a:hover {
 
 
 
-/* =========================
-   MOBILE NAV SYSTEM
-========================= */
 
-.menu-toggle {
-    display: none;
-    font-size: 26px;
-    color: white;
-    cursor: pointer;
-}
-
-.nav-links {
-    display: flex;
-    gap: 15px;
-}
-
-/* MOBILE VIEW */
-@media (max-width: 768px) {
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 70px;
-        right: 0;
-        background: #0f0f0f;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        display: none;
-        padding: 20px 0;
-    }
-
-    .nav-links a {
-        padding: 10px;
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-}
 </style>
 
 </head>
@@ -405,10 +361,7 @@ window.addEventListener("load", revealOnScroll);
 
 
 
-function toggleMenu() {
-    const nav = document.getElementById("navLinks");
-    nav.classList.toggle("active");
-}
+
 </script>
 
 </body>
