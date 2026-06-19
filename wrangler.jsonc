@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "xtreme-hitek",
+  "compatibility_date": "2026-04-13",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "xtreme-hitek"
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}
